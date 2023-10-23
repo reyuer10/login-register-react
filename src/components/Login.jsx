@@ -1,6 +1,6 @@
 import React from "react";
-import { PiCheckSquare, PiSquare} from 'react-icons/pi';
-
+import { PiCheckSquare, PiSquare } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
@@ -11,7 +11,7 @@ function Login() {
         </div>
         <div className="space-y-3">
           <div className="text-left">
-            <label className="text-sm text-slate-400">Email</label>
+            <label className="text-[12px] text-slate-500">Email</label>
             <span className="flex items-center">
               <svg
                 className="text-slate-800 absolute fill-current ml-2"
@@ -26,12 +26,12 @@ function Login() {
 
               <input
                 type="text"
-                className="border border-slate-500 rounded-lg p-1 pl-9 w-full"
+                className="border border-slate-500 transition duration-100 focus:outline-none focus:border-slate-400 focus:ring focus:ring-slate-300 rounded-lg p-1 pl-9 w-full"
               />
             </span>
           </div>
           <div className="text-left">
-            <label className="text-sm text-slate-400">Password</label>
+            <label className="text-[12px] text-slate-500">Password</label>
             <span className="flex items-center">
               <svg
                 className="text-slate-800 absolute fill-current ml-2"
@@ -46,17 +46,26 @@ function Login() {
               </svg>
               <input
                 type="password"
-                className="border border-slate-500 rounded-lg p-1 pl-9 w-full"
+                className="border border-slate-500 transition duration-100 focus:outline-none focus:border-slate-400 focus:ring focus:ring-slate-300 rounded-lg p-1 pl-9 w-full"
               />
             </span>
             <div className="flex items-center py-2 cursor-pointer">
-                <PiSquare className="text-slate-500" size={17} />
-                <label className="text-sm text-slate-500">Show password</label>
+              <PiSquare className="text-slate-500" size={17} />
+              <label className="text-sm text-slate-500">Show password</label>
             </div>
             <div className="text-center">
               <button className="text-white font-bold bg-slate-800 rounded-lg w-full my-5 py-2 hover:bg-slate-700 hover:transition-colors hover:duration-200">
                 Login
               </button>
+            </div>
+            <div className=" text-center space-x-1">
+              <label className="text-[12px]">Don't have an account?</label>
+              <Link
+                to="/register"
+                className="text-[12px] underline text-blue-400"
+              >
+                Sign up
+              </Link>
             </div>
           </div>
         </div>
